@@ -1,4 +1,4 @@
-# Data Structures & Algorithms
+# Data Structures & Algorithms [![Build Status](https://travis-ci.com/miron4dev/dsa.svg?branch=master)](https://travis-ci.com/miron4dev/dsa)
 
 ## Implemented Algorithms
 
