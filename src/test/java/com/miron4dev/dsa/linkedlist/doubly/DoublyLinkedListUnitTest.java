@@ -1,4 +1,4 @@
-package com.miron4dev.dsa.linkedlist;
+package com.miron4dev.dsa.linkedlist.doubly;
 
 import static org.junit.Assert.*;
 
@@ -6,11 +6,12 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class SinglyLinkedListUnitTest {
+public class DoublyLinkedListUnitTest {
+
 
 	@Test
 	public void add() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -19,12 +20,12 @@ public class SinglyLinkedListUnitTest {
 
 		assertEquals(5, list.size());
 
-		assertEquals("3 -> 2 -> 5 -> 15 -> 8 -> ", list.toString());
+		assertEquals("3 <-> 2 <-> 5 <-> 15 <-> 8 <-> ", list.toString());
 	}
 
 	@Test
 	public void get() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -40,7 +41,7 @@ public class SinglyLinkedListUnitTest {
 
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void getWithIncorrectIndex() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 
 		list.get(1);
@@ -48,7 +49,7 @@ public class SinglyLinkedListUnitTest {
 
 	@Test
 	public void removeMiddle() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -60,12 +61,12 @@ public class SinglyLinkedListUnitTest {
 		assertEquals(4, list.size());
 
 
-		assertEquals("3 -> 2 -> 15 -> 8 -> ", list.toString());
+		assertEquals("3 <-> 2 <-> 15 <-> 8 <-> ", list.toString());
 	}
 
 	@Test
 	public void removeFirst() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -77,12 +78,12 @@ public class SinglyLinkedListUnitTest {
 		assertEquals(4, list.size());
 
 
-		assertEquals("2 -> 5 -> 15 -> 8 -> ", list.toString());
+		assertEquals("2 <-> 5 <-> 15 <-> 8 <-> ", list.toString());
 	}
 
 	@Test
 	public void removeLast() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -94,12 +95,12 @@ public class SinglyLinkedListUnitTest {
 		assertEquals(4, list.size());
 
 
-		assertEquals("3 -> 2 -> 5 -> 15 -> ", list.toString());
+		assertEquals("3 <-> 2 <-> 5 <-> 15 <-> ", list.toString());
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void removeWithIncorrectIndex() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 
 		list.remove(1);
@@ -107,7 +108,7 @@ public class SinglyLinkedListUnitTest {
 
 	@Test
 	public void set() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 		list.add(2);
 		list.add(5);
@@ -119,14 +120,15 @@ public class SinglyLinkedListUnitTest {
 
 		assertEquals(5, list.size());
 
-		assertEquals("3 -> 2 -> 100 -> 15 -> 8 -> ", list.toString());
+		assertEquals("3 <-> 2 <-> 100 <-> 15 <-> 8 <-> ", list.toString());
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void setWithIncorrectIndex() {
-		List<Integer> list = new SinglyLinkedList<>();
+		List<Integer> list = new DoublyLinkedList<>();
 		list.add(3);
 
 		list.set(1, 2);
 	}
+
 }

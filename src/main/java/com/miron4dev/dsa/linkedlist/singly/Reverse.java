@@ -1,4 +1,4 @@
-package com.miron4dev.dsa.linkedlist;
+package com.miron4dev.dsa.linkedlist.singly;
 
 /**
  * Reverse a singly linked list.

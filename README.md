@@ -25,4 +25,5 @@
 | Data Structure | Implementation |
 |:--------------|:----------------:|
 |[Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)|[BinarySearchTree.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/tree/bst/BinarySearchTree.java)|
-|[Singly Linked List](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)|[SinglyLinkedList.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/linkedlist/SinglyLinkedList.java)|
+|[Singly Linked List](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)|[SinglyLinkedList.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/linkedlist/singly/SinglyLinkedList.java)|
+|[Doubly Linked List](https://en.wikipedia.org/wiki/Doubly_linked_list)|[DoublyLinkedList.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/linkedlist/doubly/DoublyLinkedList.java)|

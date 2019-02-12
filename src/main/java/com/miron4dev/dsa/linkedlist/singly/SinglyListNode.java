@@ -1,11 +1,11 @@
-package com.miron4dev.dsa.linkedlist;
+package com.miron4dev.dsa.linkedlist.singly;
 
 /**
  * Definition for singly-linked list.
  */
 public class SinglyListNode<T> {
 
-	private final T value;
+	private T value;
 	private SinglyListNode<T> next;
 
 	public SinglyListNode(T value) {
@@ -14,6 +14,10 @@ public class SinglyListNode<T> {
 
 	public T getValue() {
 		return value;
+	}
+
+	public void setValue(T value) {
+		this.value = value;
 	}
 
 	public SinglyListNode<T> getNext() {

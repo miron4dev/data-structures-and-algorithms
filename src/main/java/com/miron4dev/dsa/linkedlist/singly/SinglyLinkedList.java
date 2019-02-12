@@ -1,4 +1,4 @@
-package com.miron4dev.dsa.linkedlist;
+package com.miron4dev.dsa.linkedlist.singly;
 
 import java.util.AbstractList;
 
@@ -59,22 +59,10 @@ public class SinglyLinkedList<T> extends AbstractList<T> {
 	public T set(int index, T element) {
 		validateIndex(index);
 
-		T elem;
-		SinglyListNode<T> node = new SinglyListNode<>(element);
-		if (index == 0) {
-			elem = head != null ? head.getValue() : null;
-			head = node;
-		} else {
-			SinglyListNode<T> prev = getNode(index - 1);
-			SinglyListNode<T> next = prev.getNext();
-
-			prev.setNext(node);
-			node.setNext(next.getNext());
-
-			elem = next.getValue();
-		}
-
-		return elem;
+		SinglyListNode<T> node = getNode(index);
+		T oldValue = node.getValue();
+		node.setValue(element);
+		return oldValue;
 	}
 
 	@Override
