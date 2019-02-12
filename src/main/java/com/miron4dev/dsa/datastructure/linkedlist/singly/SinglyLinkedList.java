@@ -2,7 +2,7 @@ package com.miron4dev.dsa.datastructure.linkedlist.singly;
 
 import java.util.AbstractList;
 
-public class SinglyLinkedList<T> extends AbstractList<T> {
+public class SinglyLinkedList<T extends Comparable<T>> extends AbstractList<T> {
 
 	private SinglyListNode<T> head;
 	private int size = 0;

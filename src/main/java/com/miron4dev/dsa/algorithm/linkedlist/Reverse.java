@@ -5,7 +5,7 @@ import com.miron4dev.dsa.datastructure.linkedlist.singly.SinglyListNode;
 /**
  * Reverse a singly linked list.
  */
-public class Reverse<T> {
+public class Reverse<T extends Comparable<T>> {
 
 	public SinglyListNode<T> reverseIteratively(SinglyListNode<T> head) {
 		SinglyListNode<T> previous = null;
@@ -21,11 +21,7 @@ public class Reverse<T> {
 	}
 
 	public SinglyListNode<T> reverseRecursively(SinglyListNode<T> head) {
-		if (head == null) {
-			return null;
-		}
-
-		if (head.getNext() == null) {
+		if (head == null || head.getNext() == null) {
 			return head;
 		}
 
