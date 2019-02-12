@@ -1,6 +1,6 @@
 package com.miron4dev.dsa.algorithm.string;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 

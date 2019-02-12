@@ -1,4 +1,4 @@
-package com.miron4dev.dsa.datastructure.linkedlist;
+package com.miron4dev.dsa.datastructure.linkedlist.doubly;
 
 import java.util.AbstractList;
 

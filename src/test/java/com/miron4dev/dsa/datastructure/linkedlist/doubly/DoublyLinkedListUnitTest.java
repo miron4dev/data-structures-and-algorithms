@@ -1,12 +1,10 @@
 package com.miron4dev.dsa.datastructure.linkedlist.doubly;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
 import org.junit.Test;
-
-import com.miron4dev.dsa.datastructure.linkedlist.DoublyLinkedList;
 
 public class DoublyLinkedListUnitTest {
 

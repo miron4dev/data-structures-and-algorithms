@@ -1,6 +1,6 @@
-package com.miron4dev.dsa.datastructure.linkedlist.linkedlist;
+package com.miron4dev.dsa.algorithm.linkedlist;
 
-import com.miron4dev.dsa.datastructure.linkedlist.SinglyListNode;
+import com.miron4dev.dsa.datastructure.linkedlist.singly.SinglyListNode;
 
 /**
  * Reverse a singly linked list.
