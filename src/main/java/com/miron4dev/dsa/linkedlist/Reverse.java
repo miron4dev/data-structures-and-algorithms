@@ -3,12 +3,12 @@ package com.miron4dev.dsa.linkedlist;
 /**
  * Reverse a singly linked list.
  */
-public class Reverse {
+public class Reverse<T> {
 
-	public ListNode reverseIteratively(ListNode head) {
-		ListNode previous = null;
-		ListNode current = head;
-		ListNode next;
+	public SinglyListNode<T> reverseIteratively(SinglyListNode<T> head) {
+		SinglyListNode<T> previous = null;
+		SinglyListNode<T> current = head;
+		SinglyListNode<T> next;
 		while (current != null) {
 			next = current.getNext();
 			current.setNext(previous);
@@ -18,7 +18,7 @@ public class Reverse {
 		return previous;
 	}
 
-	public ListNode reverseRecursively(ListNode head) {
+	public SinglyListNode<T> reverseRecursively(SinglyListNode<T> head) {
 		if (head == null) {
 			return null;
 		}
@@ -27,7 +27,7 @@ public class Reverse {
 			return head;
 		}
 
-		ListNode first = reverseRecursively(head.getNext());
+		SinglyListNode<T> first = reverseRecursively(head.getNext());
 		head.getNext().setNext(head);
 		head.setNext(null);
 		return first;
