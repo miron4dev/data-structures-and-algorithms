@@ -2,7 +2,7 @@
 
 ## Implemented Algorithms
 
-| Data Structure | Description | Time Complexity | Space Complexity|
+| Topic | Description | Time Complexity | Space Complexity|
 |:--------------|:----------------:|:----------------:|:----------------:|
 |String |[Check for Anagram](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Anagram.java)|O(n)|O(1)|
 |String |[Check for Palindrome](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Palindrome.java)|O(n)|O(1)|
