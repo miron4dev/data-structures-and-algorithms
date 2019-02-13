@@ -10,9 +10,8 @@ public class Reverse<T extends Comparable<T>> {
 	public SinglyListNode<T> reverseIteratively(SinglyListNode<T> head) {
 		SinglyListNode<T> previous = null;
 		SinglyListNode<T> current = head;
-		SinglyListNode<T> next;
 		while (current != null) {
-			next = current.getNext();
+			SinglyListNode<T> next = current.getNext();
 			current.setNext(previous);
 			previous = current;
 			current = next;

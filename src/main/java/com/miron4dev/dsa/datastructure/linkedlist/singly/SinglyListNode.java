@@ -5,66 +5,77 @@ package com.miron4dev.dsa.datastructure.linkedlist.singly;
  */
 public class SinglyListNode<T extends Comparable<T>> {
 
-    private T value;
-    private SinglyListNode<T> next;
+	private T value;
+	private SinglyListNode<T> next;
 
-    public SinglyListNode(T value) {
-        this.value = value;
-    }
+	public SinglyListNode(T value) {
+		this.value = value;
+	}
 
-    public T getValue() {
-        return value;
-    }
+	public static <T extends Comparable<T>> SinglyListNode<T> build(T... val) {
+		SinglyListNode<T> root = new SinglyListNode<>(null);
+		SinglyListNode<T> cursor = root;
+		for (T i : val) {
+			SinglyListNode<T> node = new SinglyListNode<>(i);
+			cursor.setNext(node);
+			cursor = node;
+		}
+		return root.getNext();
+	}
 
-    public void setValue(T value) {
-        this.value = value;
-    }
+	public T getValue() {
+		return value;
+	}
 
-    public SinglyListNode<T> getNext() {
-        return next;
-    }
+	public void setValue(T value) {
+		this.value = value;
+	}
 
-    public void setNext(SinglyListNode<T> next) {
-        this.next = next;
-    }
+	public SinglyListNode<T> getNext() {
+		return next;
+	}
 
-    @Override
-    public String toString() {
-        return value.toString();
-    }
+	public void setNext(SinglyListNode<T> next) {
+		this.next = next;
+	}
 
-    @Override
-    public boolean equals(Object anotherNode) {
-        if (this == anotherNode)
-            return true;
+	@Override
+	public String toString() {
+		return value.toString();
+	}
 
-        if (anotherNode == null || getClass() != anotherNode.getClass()) {
-            return false;
-        }
+	@Override
+	public boolean equals(Object anotherNode) {
+		if (this == anotherNode)
+			return true;
 
-        return equals(this, (SinglyListNode<T>) anotherNode);
-    }
+		if (anotherNode == null || getClass() != anotherNode.getClass()) {
+			return false;
+		}
 
-    @Override
-    public int hashCode() {
-        int result = 1;
+		return equals(this, (SinglyListNode<T>) anotherNode);
+	}
 
-        result = 31 * result + value.hashCode();
-        result = 31 * result + (next != null ? next.hashCode() : 0);
+	@Override
+	public int hashCode() {
+		int result = 1;
 
-        return result;
-    }
+		result = 31 * result + value.hashCode();
+		result = 31 * result + (next != null ? next.hashCode() : 0);
 
-    private boolean equals(SinglyListNode<T> node1, SinglyListNode<T> node2) {
-        if (node1 == null || node2 == null) {
-            return node1 == node2;
-        }
+		return result;
+	}
 
-        if (node1.getValue().compareTo(node2.getValue()) != 0) {
-            return false;
-        }
+	private boolean equals(SinglyListNode<T> node1, SinglyListNode<T> node2) {
+		if (node1 == null || node2 == null) {
+			return node1 == node2;
+		}
 
-        return equals(node1.getNext(), node2.getNext());
-    }
+		if (node1.getValue().compareTo(node2.getValue()) != 0) {
+			return false;
+		}
+
+		return equals(node1.getNext(), node2.getNext());
+	}
 
 }
