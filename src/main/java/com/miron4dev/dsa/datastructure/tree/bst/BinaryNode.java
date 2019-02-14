@@ -1,6 +1,8 @@
 package com.miron4dev.dsa.datastructure.tree.bst;
 
-public class BinaryNode<T extends Comparable<T>> {
+import com.miron4dev.dsa.datastructure.tree.Node;
+
+public class BinaryNode<T extends Comparable<T>> implements Node<T> {
 
 	private final T data;
 
@@ -17,30 +19,17 @@ public class BinaryNode<T extends Comparable<T>> {
 		this.rightChild = rightChild;
 	}
 
+	@Override
 	public T getData() {
 		return data;
 	}
 
-	public BinaryNode<T> getLeftChild() {
-		return leftChild;
-	}
-
-	public void setLeftChild(BinaryNode<T> leftChild) {
-		this.leftChild = leftChild;
-	}
-
-	public BinaryNode<T> getRightChild() {
-		return rightChild;
-	}
-
-	public void setRightChild(BinaryNode<T> rightChild) {
-		this.rightChild = rightChild;
-	}
-
+	@Override
 	public boolean isLeaf() {
 		return leftChild == null && rightChild == null;
 	}
 
+	@Override
 	public int size() {
 		int size = 1;
 		if (leftChild != null) {
@@ -50,6 +39,28 @@ public class BinaryNode<T extends Comparable<T>> {
 			size += rightChild.size();
 		}
 		return size;
+	}
+
+	@Override
+	public int height() {
+		int height = 1;
+		int leftHeight = leftChild != null ? leftChild.height() : 0;
+		int rightHeight = rightChild != null ? rightChild.height() : 0;
+		return height + Math.max(leftHeight, rightHeight);
+	}
+
+	@Override
+	public boolean isBalanced() {
+		if (leftChild != null && !leftChild.isBalanced()) {
+			return false;
+		}
+
+		if (rightChild != null && !rightChild.isBalanced()) {
+			return false;
+		}
+		int leftHeight = leftChild != null ? leftChild.height() : 0;
+		int rightHeight = rightChild != null ? rightChild.height() : 0;
+		return Math.abs(leftHeight - rightHeight) <= 1;
 	}
 
 	@Override
@@ -78,6 +89,22 @@ public class BinaryNode<T extends Comparable<T>> {
 		result = 31 * result + data.hashCode();
 
 		return result;
+	}
+
+	public BinaryNode<T> getLeftChild() {
+		return leftChild;
+	}
+
+	public void setLeftChild(BinaryNode<T> leftChild) {
+		this.leftChild = leftChild;
+	}
+
+	public BinaryNode<T> getRightChild() {
+		return rightChild;
+	}
+
+	public void setRightChild(BinaryNode<T> rightChild) {
+		this.rightChild = rightChild;
 	}
 
 	private boolean equals(BinaryNode<T> node1, BinaryNode<T> node2) {

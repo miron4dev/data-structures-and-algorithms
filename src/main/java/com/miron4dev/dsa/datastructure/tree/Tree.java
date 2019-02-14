@@ -54,4 +54,11 @@ public interface Tree<T extends Comparable<T>> {
 	 * @return see description.
 	 */
 	int size();
+
+	/**
+	 * Whether the tree is balanced or not.
+	 *
+	 * @return true or false.
+	 */
+	boolean isBalanced();
 }

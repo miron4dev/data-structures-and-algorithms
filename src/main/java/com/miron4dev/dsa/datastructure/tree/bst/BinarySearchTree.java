@@ -60,6 +60,14 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 	}
 
 	@Override
+	public boolean isBalanced() {
+		if (root == null) {
+			return true;
+		}
+		return root.isBalanced();
+	}
+
+	@Override
 	public String toString() {
 		if (root != null) {
 			return inOrderTraversal(root);

@@ -1,7 +1,9 @@
 package com.miron4dev.dsa.datastructure.tree.bst;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -101,6 +103,29 @@ public class BinarySearchTreeUnitTest {
 
 		assertEquals(4, bst.size());
 		assertEquals("1 -> 4 -> 8 -> 14 -> ", bst.toString());
+	}
+
+	@Test
+	public void isBalancedTrue() {
+		Tree<Integer> bst = new BinarySearchTree<>();
+		bst.insert(10);
+		bst.insert(4);
+		bst.insert(8);
+		bst.insert(14);
+		bst.insert(1);
+
+		assertTrue(bst.isBalanced());
+	}
+
+	@Test
+	public void isBalancedFalse() {
+		Tree<Integer> bst = new BinarySearchTree<>();
+		bst.insert(1);
+		bst.insert(4);
+		bst.insert(8);
+		bst.insert(14);
+
+		assertFalse(bst.isBalanced());
 	}
 
 	@Test
