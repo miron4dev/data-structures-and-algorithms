@@ -1,23 +1,19 @@
 package com.miron4dev.dsa.datastructure.tree.bst;
 
 import java.util.Objects;
-import java.util.function.Consumer;
 
 import com.miron4dev.dsa.datastructure.tree.Tree;
 
 public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 
-	private BinaryNode<T> root;
+	protected BinaryNode<T> root;
 
 	private int size;
 
 	@Override
 	public void insert(T data) {
-		if (root == null) {
-			root = new BinaryNode<>(data);
-		} else {
-			insertNode(data, root);
-		}
+		root = insertNode(root, data);
+
 		size++;
 	}
 
@@ -75,21 +71,22 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 		return "null";
 	}
 
-	private void insertNode(T data, BinaryNode<T> node) {
-		if (data.compareTo(node.getData()) < 0) {
-			insertNode(data, node.getLeftChild(), node::setLeftChild);
-		} else {
-			insertNode(data, node.getRightChild(), node::setRightChild);
-		}
+	protected BinaryNode<T> recalculateNode(BinaryNode<T> node, T data) {
+		return node;
 	}
 
-	private void insertNode(T data, BinaryNode<T> node, Consumer<BinaryNode<T>> setChild) {
-		if (node != null) {
-			insertNode(data, node);
-		} else {
-			BinaryNode<T> newNode = new BinaryNode<>(data);
-			setChild.accept(newNode);
+	private BinaryNode<T> insertNode(BinaryNode<T> node, T data) {
+		if (node == null) {
+			return new BinaryNode<>(data);
 		}
+
+		if (data.compareTo(node.getData()) < 0) {
+			node.setLeftChild(insertNode(node.getLeftChild(), data));
+		} else {
+			node.setRightChild(insertNode(node.getRightChild(), data));
+		}
+
+		return recalculateNode(node, data);
 	}
 
 	private BinaryNode<T> deleteNode(T data, BinaryNode<T> node) {
@@ -97,18 +94,19 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 			return null;
 		}
 
-		if (data.compareTo(node.getData()) < 0) {
+		if (data.compareTo(node.getData()) < 0) { // go to the left
 			node.setLeftChild(deleteNode(data, node.getLeftChild()));
-		} else if (data.compareTo(node.getData()) > 0) {
+		} else if (data.compareTo(node.getData()) > 0) { // go to the right
 			node.setRightChild(deleteNode(data, node.getRightChild()));
-		} else {
+		} else { // MATCH FOUND!
 			if (node.isLeaf()) {
-				node = null;
+				node = null; // just remove
 			} else if (node.getLeftChild() == null) {
-				node = node.getRightChild();
+				node = node.getRightChild(); // connect next right child
 			} else if (node.getRightChild() == null) {
-				node = node.getLeftChild();
+				node = node.getLeftChild(); // connect next left child
 			} else {
+				// swap with the greatest node of the left child
 				BinaryNode<T> predecessor = getMostRightNode(node.getLeftChild());
 
 				BinaryNode<T> leftChild = deleteNode(predecessor.getData(), node.getLeftChild());
@@ -116,7 +114,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 			}
 		}
 
-		return node;
+		return recalculateNode(node, data);
 	}
 
 	private BinaryNode<T> getMostRightNode(BinaryNode<T> node) {

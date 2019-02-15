@@ -43,10 +43,16 @@ public class BinaryNode<T extends Comparable<T>> implements Node<T> {
 
 	@Override
 	public int height() {
-		int height = 1;
 		int leftHeight = leftChild != null ? leftChild.height() : 0;
 		int rightHeight = rightChild != null ? rightChild.height() : 0;
-		return height + Math.max(leftHeight, rightHeight);
+		return 1 + Math.max(leftHeight, rightHeight);
+	}
+
+	@Override
+	public int getBalance() {
+		int leftHeight = leftChild != null ? leftChild.height() : 0;
+		int rightHeight = rightChild != null ? rightChild.height() : 0;
+		return leftHeight - rightHeight;
 	}
 
 	@Override
@@ -58,9 +64,7 @@ public class BinaryNode<T extends Comparable<T>> implements Node<T> {
 		if (rightChild != null && !rightChild.isBalanced()) {
 			return false;
 		}
-		int leftHeight = leftChild != null ? leftChild.height() : 0;
-		int rightHeight = rightChild != null ? rightChild.height() : 0;
-		return Math.abs(leftHeight - rightHeight) <= 1;
+		return Math.abs(getBalance()) <= 1;
 	}
 
 	@Override

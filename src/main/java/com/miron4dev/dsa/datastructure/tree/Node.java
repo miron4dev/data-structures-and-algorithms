@@ -10,5 +10,7 @@ public interface Node<T extends Comparable<T>> {
 
 	int height();
 
+	int getBalance();
+
 	boolean isBalanced();
 }
