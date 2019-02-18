@@ -1,6 +1,4 @@
-package com.miron4dev.dsa.datastructure.tree.bst.rb;
-
-import com.miron4dev.dsa.datastructure.tree.bst.AbstractBinarySearchTree;
+package com.miron4dev.dsa.datastructure.tree.bst;
 
 public class RedBlackTree<T extends Comparable<T>> extends AbstractBinarySearchTree<T, RedBlackNode<T>> {
 
@@ -106,44 +104,4 @@ public class RedBlackTree<T extends Comparable<T>> extends AbstractBinarySearchT
         node2.setColor(tempColor);
     }
 
-    private void rightRotation(RedBlackNode<T> node) {
-        RedBlackNode<T> tempLeftNode = node.getLeftChild();
-        node.setLeftChild(tempLeftNode.getRightChild());
-
-        if (node.getLeftChild() != null) {
-            node.getLeftChild().setParent(node);
-        }
-
-        rotation(node, tempLeftNode);
-
-        tempLeftNode.setRightChild(node);
-        node.setParent(tempLeftNode);
-    }
-
-    private void leftRotation(RedBlackNode<T> node) {
-        RedBlackNode<T> tempRightNode = node.getRightChild();
-        node.setRightChild(tempRightNode.getLeftChild());
-
-        if (node.getRightChild() != null) {
-            node.getRightChild().setParent(node);
-        }
-
-        rotation(node, tempRightNode);
-
-        tempRightNode.setLeftChild(node);
-        node.setParent(tempRightNode);
-
-    }
-
-    private void rotation(RedBlackNode<T> node, RedBlackNode<T> tempNode) {
-        tempNode.setParent(node.getParent());
-
-        if (tempNode.getParent() == null) {
-            this.root = tempNode;
-        } else if (node == tempNode.getParent().getLeftChild()) {
-            node.getParent().setLeftChild(tempNode);
-        } else {
-            node.getParent().setRightChild(tempNode);
-        }
-    }
 }

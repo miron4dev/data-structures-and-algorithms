@@ -1,10 +1,11 @@
 package com.miron4dev.dsa.datastructure.tree.bst;
 
+import com.miron4dev.dsa.datastructure.tree.Node;
 import com.miron4dev.dsa.datastructure.tree.Tree;
 
 import java.util.Objects;
 
-public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extends AbstractBinaryNode<T, N>> implements Tree<T> {
+abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extends AbstractBinaryNode<T, N>> implements Tree<T> {
 
     protected N root;
     protected int size;
@@ -20,11 +21,32 @@ public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extend
 
     @Override
     public void delete(T data) {
-        if (root != null) {
+        if (!isEmpty()) {
             root = deleteNode(data, root);
 
             size--;
         }
+    }
+
+    @Override
+    public N find(T elem) {
+        N node = root;
+
+        while (node != null) {
+            if (node.getData().compareTo(elem) > 0) {
+                node = node.getLeftChild();
+            } else if (node.getData().compareTo(elem) < 0) {
+                node = node.getRightChild();
+            } else {
+                break;
+            }
+        }
+        return node;
+    }
+
+    @Override
+    public Node<T> getRoot() {
+        return root;
     }
 
     @Override
@@ -44,7 +66,7 @@ public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extend
 
     @Override
     public T getMin(int k) {
-        if (root == null) {
+        if (isEmpty()) {
             return null;
         }
 
@@ -57,16 +79,18 @@ public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extend
     }
 
     @Override
+    public boolean isEmpty() {
+        return root == null;
+    }
+
+    @Override
     public boolean isBalanced() {
-        if (root == null) {
-            return true;
-        }
-        return root.isBalanced();
+        return isEmpty() || root.isBalanced();
     }
 
     @Override
     public String toString() {
-        if (root != null) {
+        if (!isEmpty()) {
             return inOrderTraversal(root);
         }
         return "null";
@@ -74,6 +98,50 @@ public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extend
 
     protected N recalculateNode(N node) {
         return node;
+    }
+
+    protected N rightRotation(N node) {
+        N tempLeftNode = node.getLeftChild();
+        node.setLeftChild(tempLeftNode.getRightChild());
+
+        if (node.getLeftChild() != null) {
+            node.getLeftChild().setParent(node);
+        }
+
+        rotation(node, tempLeftNode);
+
+        tempLeftNode.setRightChild(node);
+        node.setParent(tempLeftNode);
+
+        return tempLeftNode;
+    }
+
+    protected N leftRotation(N node) {
+        N tempRightNode = node.getRightChild();
+        node.setRightChild(tempRightNode.getLeftChild());
+
+        if (node.getRightChild() != null) {
+            node.getRightChild().setParent(node);
+        }
+
+        rotation(node, tempRightNode);
+
+        tempRightNode.setLeftChild(node);
+        node.setParent(tempRightNode);
+
+        return tempRightNode;
+    }
+
+    private void rotation(N node, N tempNode) {
+        tempNode.setParent(node.getParent());
+
+        if (tempNode.getParent() == null) {
+            this.root = tempNode;
+        } else if (node == tempNode.getParent().getLeftChild()) {
+            node.getParent().setLeftChild(tempNode);
+        } else {
+            node.getParent().setRightChild(tempNode);
+        }
     }
 
     private N insertNode(N node, T data) {
@@ -189,6 +257,6 @@ public abstract class AbstractBinarySearchTree<T extends Comparable<T>, N extend
 
     @Override
     public int hashCode() {
-        return root != null ? root.hashCode() : 0;
+        return isEmpty() ? 0 : root.hashCode();
     }
 }

@@ -1,7 +1,4 @@
-package com.miron4dev.dsa.datastructure.tree.bst.avl;
-
-import com.miron4dev.dsa.datastructure.tree.bst.BinaryNode;
-import com.miron4dev.dsa.datastructure.tree.bst.BinarySearchTree;
+package com.miron4dev.dsa.datastructure.tree.bst;
 
 public class AvlTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
@@ -26,26 +23,6 @@ public class AvlTree<T extends Comparable<T>> extends BinarySearchTree<T> {
             return leftRotation(node);
         }
         return node;
-    }
-
-    private BinaryNode<T> rightRotation(BinaryNode<T> node) {
-        BinaryNode<T> tempLeftNode = node.getLeftChild();
-        BinaryNode<T> t = tempLeftNode.getRightChild();
-
-        tempLeftNode.setRightChild(node);
-        node.setLeftChild(t);
-
-        return tempLeftNode;
-    }
-
-    private BinaryNode<T> leftRotation(BinaryNode<T> node) {
-        BinaryNode<T> tempRightNode = node.getRightChild();
-        BinaryNode<T> t = tempRightNode.getLeftChild();
-
-        tempRightNode.setLeftChild(node);
-        node.setRightChild(t);
-
-        return tempRightNode;
     }
 
 }

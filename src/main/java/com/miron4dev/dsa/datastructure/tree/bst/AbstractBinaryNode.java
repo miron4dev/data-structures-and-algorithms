@@ -2,10 +2,11 @@ package com.miron4dev.dsa.datastructure.tree.bst;
 
 import com.miron4dev.dsa.datastructure.tree.Node;
 
-public abstract class AbstractBinaryNode<T extends Comparable<T>, N extends AbstractBinaryNode<T, N>> implements Node<T> {
+abstract class AbstractBinaryNode<T extends Comparable<T>, N extends AbstractBinaryNode<T, N>> implements Node<T> {
 
     private final T data;
 
+    private N parent;
     private N leftChild;
     private N rightChild;
 
@@ -87,6 +88,14 @@ public abstract class AbstractBinaryNode<T extends Comparable<T>, N extends Abst
         result = 31 * result + data.hashCode();
 
         return result;
+    }
+
+    public N getParent() {
+        return parent;
+    }
+
+    public void setParent(N parent) {
+        this.parent = parent;
     }
 
     public N getLeftChild() {

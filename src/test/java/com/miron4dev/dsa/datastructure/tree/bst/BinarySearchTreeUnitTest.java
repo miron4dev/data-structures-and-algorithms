@@ -1,5 +1,6 @@
 package com.miron4dev.dsa.datastructure.tree.bst;
 
+import com.miron4dev.dsa.datastructure.tree.Node;
 import com.miron4dev.dsa.datastructure.tree.Tree;
 import org.junit.Test;
 
@@ -16,8 +17,24 @@ public class BinarySearchTreeUnitTest {
         tree.insert(14);
         tree.insert(1);
 
-
         assertTrue(tree.isBalanced());
+
+        assertEquals(5, tree.size());
+    }
+
+    @Test
+    public void find() {
+        Tree<Integer> tree = new BinarySearchTree<>();
+        tree.insert(10);
+        tree.insert(4);
+        tree.insert(8);
+        tree.insert(14);
+        tree.insert(1);
+
+        Node<Integer> node = tree.find(8);
+
+        assertNotNull(node);
+        assertEquals(new Integer(8), node.getData());
 
         assertEquals(5, tree.size());
     }

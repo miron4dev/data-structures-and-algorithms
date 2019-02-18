@@ -1,7 +1,6 @@
-package com.miron4dev.dsa.datastructure.tree.bst.rb;
+package com.miron4dev.dsa.datastructure.tree.bst;
 
 import com.miron4dev.dsa.datastructure.tree.Tree;
-import com.miron4dev.dsa.datastructure.tree.bst.BinarySearchTreeUnitTest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
