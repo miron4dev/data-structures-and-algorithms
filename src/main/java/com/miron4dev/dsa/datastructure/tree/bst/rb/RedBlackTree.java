@@ -1,11 +1,15 @@
-package com.miron4dev.dsa.datastructure.tree.rb;
+package com.miron4dev.dsa.datastructure.tree.bst.rb;
 
-public class RedBlackTree<T extends Comparable<T>> {
+import com.miron4dev.dsa.datastructure.tree.bst.AbstractBinarySearchTree;
 
-    private RedBlackNode<T> root;
+public class RedBlackTree<T extends Comparable<T>> extends AbstractBinarySearchTree<T, RedBlackNode<T>> {
 
-    private int size;
+    @Override
+    protected RedBlackNode<T> createNode(T data, RedBlackNode<T> leftChild, RedBlackNode<T> rightChild) {
+        return new RedBlackNode<>(data, leftChild, rightChild);
+    }
 
+    @Override
     public void insert(T data) {
         RedBlackNode<T> node = new RedBlackNode<>(data);
         root = insertNode(root, node);
@@ -16,11 +20,8 @@ public class RedBlackTree<T extends Comparable<T>> {
     }
 
     @Override
-    public String toString() {
-        if (root != null) {
-            return inOrderTraversal(root);
-        }
-        return "null";
+    public void delete(T data) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     private RedBlackNode<T> insertNode(RedBlackNode<T> root, RedBlackNode<T> node) {
@@ -39,7 +40,7 @@ public class RedBlackTree<T extends Comparable<T>> {
         return root;
     }
 
-    private void fixViolations(RedBlackNode<T> node) {
+    protected void fixViolations(RedBlackNode<T> node) {
         RedBlackNode<T> parentNode;
         RedBlackNode<T> grandparentNode;
 
@@ -144,20 +145,5 @@ public class RedBlackTree<T extends Comparable<T>> {
         } else {
             node.getParent().setRightChild(tempNode);
         }
-    }
-
-    private String inOrderTraversal(RedBlackNode<T> node) {
-        StringBuilder result = new StringBuilder();
-        if (node.getLeftChild() != null) {
-            result.append(inOrderTraversal(node.getLeftChild()));
-        }
-
-        result.append(node).append(" -> ");
-
-        if (node.getRightChild() != null) {
-            result.append(inOrderTraversal(node.getRightChild()));
-        }
-
-        return result.toString();
     }
 }
