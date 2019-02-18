@@ -25,6 +25,7 @@
 | Data Structure | Implementation |
 |:--------------|:----------------:|
 |[Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)|[BinarySearchTree.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/tree/bst/BinarySearchTree.java)|
-|[AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)|[AvlTree.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/tree/bst/AvlTree.java)|
+|[AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)|[AvlTree.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/tree/bst/avl/AvlTree.java)|
+|[Red-Black Tree](https://en.wikipedia.org/wiki/Red–black_tree)|[RedBlackTree.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/tree/bst/rb/RedBlackTree.java)|
 |[Singly Linked List](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)|[SinglyLinkedList.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/linkedlist/singly/SinglyLinkedList.java)|
 |[Doubly Linked List](https://en.wikipedia.org/wiki/Doubly_linked_list)|[DoublyLinkedList.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/datastructure/linkedlist/doubly/DoublyLinkedList.java)|
