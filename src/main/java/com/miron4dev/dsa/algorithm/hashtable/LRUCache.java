@@ -12,89 +12,89 @@ import java.util.Map;
  * Follow up:
  * Could you do both operations in O(1) time complexity?
  */
-public class LRUCache {
+public class LRUCache<K, V> {
 
-	private final Map<Integer, Entry> cache;
-	private final int capacity;
+    private final Map<K, Entry<K, V>> cache;
+    private final int capacity;
 
-	private Entry head;
-	private Entry tail;
+    private Entry<K, V> head;
+    private Entry<K, V> tail;
 
-	public LRUCache(int capacity) {
-		this.cache = new HashMap<>(capacity);
-		this.capacity = capacity;
-	}
+    public LRUCache(int capacity) {
+        this.cache = new HashMap<>(capacity);
+        this.capacity = capacity;
+    }
 
-	public int get(int key) {
-		if (!cache.containsKey(key)) {
-			return -1;
-		}
+    public V get(K key) {
+        if (!cache.containsKey(key)) {
+            return null;
+        }
 
-		Entry entry = cache.get(key);
+        Entry<K, V> entry = cache.get(key);
 
-		remove(entry);
-		add(entry);
+        remove(entry);
+        add(entry);
 
-		return entry.value;
-	}
+        return entry.value;
+    }
 
-	public void put(int key, int value) {
-		if (cache.containsKey(key)) {
-			Entry entry = cache.get(key);
-			entry.value = value;
+    public void put(K key, V value) {
+        if (cache.containsKey(key)) {
+            Entry<K, V> entry = cache.get(key);
+            entry.value = value;
 
-			remove(entry);
-			add(entry);
-		} else {
-			Entry entry = new Entry(key, value);
+            remove(entry);
+            add(entry);
+        } else {
+            Entry<K, V> entry = new Entry<>(key, value);
 
-			if (cache.size() == capacity) {
-				cache.remove(this.tail.key);
-				remove(this.tail);
-			}
+            if (cache.size() == capacity) {
+                cache.remove(this.tail.key);
+                remove(this.tail);
+            }
 
-			add(entry);
-			cache.put(entry.key, entry);
-		}
-	}
+            add(entry);
+            cache.put(entry.key, entry);
+        }
+    }
 
-	private void remove(Entry entry) {
-		if (entry.prev != null) {
-			entry.prev.next = entry.next;
-		} else {
-			this.head = entry.next;
-		}
+    private void remove(Entry<K, V> entry) {
+        if (entry.prev != null) {
+            entry.prev.next = entry.next;
+        } else {
+            this.head = entry.next;
+        }
 
-		if (entry.next != null) {
-			entry.next.prev = entry.prev;
-		} else {
-			this.tail = entry.prev;
-		}
-	}
+        if (entry.next != null) {
+            entry.next.prev = entry.prev;
+        } else {
+            this.tail = entry.prev;
+        }
+    }
 
-	private void add(Entry entry) {
-		Entry prevHead = this.head;
-		entry.next = prevHead;
-		entry.prev = null;
+    private void add(Entry<K, V> entry) {
+        Entry<K, V> prevHead = this.head;
+        entry.next = prevHead;
+        entry.prev = null;
 
-		this.head = entry;
+        this.head = entry;
 
-		if (prevHead == null) {
-			this.tail = entry;
-		} else {
-			prevHead.prev = entry;
-		}
-	}
+        if (prevHead == null) {
+            this.tail = entry;
+        } else {
+            prevHead.prev = entry;
+        }
+    }
 
-	private static class Entry {
-		private int key;
-		private int value;
-		private Entry prev;
-		private Entry next;
+    private static class Entry<K, V> {
+        private K key;
+        private V value;
+        private Entry<K, V> prev;
+        private Entry<K, V> next;
 
-		public Entry(int key, int value) {
-			this.key = key;
-			this.value = value;
-		}
-	}
+        public Entry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
 }
