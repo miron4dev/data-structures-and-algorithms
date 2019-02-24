@@ -20,6 +20,7 @@
 |Graph|[Number Of Islands](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/NumberOfIslands.java)|O(m*n)|O(m*n)|
 |Graph|[Walls And Gates](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/WallsAndGates.java)|O(m*n)|O(m*n)|
 |HashTable|[LRU Cache](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/hashtable/LRUCache.java)|O(1)|O(n)|
+|Classic|[Binary Search](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/BinarySearch.java)|O(log(n))|O(1)|
 
 ## Implemented Data Structures
 
