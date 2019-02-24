@@ -17,12 +17,11 @@ public class QuickSelect {
         if (k == pivotIndex) {
             return nums[k];
         }
-
-        int median = end + (start - end) / 2;
+        
         if (k < pivotIndex) { // search in left part
-            return select(nums, k, start, median - 1);
+            return select(nums, k, start, pivotIndex);
         }
-        return select(nums, k, median + 1, end);
+        return select(nums, k, pivotIndex, end);
     }
 
     private int partition(int[] nums, int start, int end) {
@@ -48,6 +47,6 @@ public class QuickSelect {
     }
 
     private int random(int start, int end) {
-        return new Random().nextInt((end - start) + 1) + start;
+        return new Random().nextInt(end - start + 1) + start;
     }
 }
