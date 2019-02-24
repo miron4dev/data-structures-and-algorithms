@@ -1,6 +1,6 @@
 package com.miron4dev.dsa.algorithm.classic;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
 
 /**
  * A selection algorithm to find the kth smallest element in an unordered list.
@@ -48,6 +48,6 @@ public class QuickSelect {
     }
 
     private int random(int start, int end) {
-        return ThreadLocalRandom.current().nextInt(start, end);
+        return new Random().nextInt((end - start) + 1) + start;
     }
 }
