@@ -19,9 +19,9 @@ public class QuickSelect {
         }
         
         if (k < pivotIndex) { // search in left part
-            return select(nums, k, start, pivotIndex);
+            return select(nums, k, start, pivotIndex - 1);
         }
-        return select(nums, k, pivotIndex, end);
+        return select(nums, k, pivotIndex + 1, end); // search in right part
     }
 
     private int partition(int[] nums, int start, int end) {
