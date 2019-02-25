@@ -12,29 +12,29 @@
 |[Hamiltonian Cycle](https://en.wikipedia.org/wiki/Hamiltonian_path)|[HamiltonianCycle.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/HamiltonianCycle.java)|
 |[Graph Coloring](https://en.wikipedia.org/wiki/Graph_coloring)|[GraphColoring.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/GraphColoring.java)|
 |[Knight's Tour Problem](https://en.wikipedia.org/wiki/Knight%27s_tour)|[KnightTourProblem.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/KnightTourProblem.java)|
-|[Bread-First-Search](https://en.wikipedia.org/wiki/Breadth-first_search)|[BreadthFirstSearch.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/traversal/BreadthFirstSearch.java)|
-|[Depth-First-Search Iterative](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchIterative.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/traversal/DepthFirstSearchIterative.java)|
-|[Depth-First-Search Recursive](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchRecursive.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/traversal/DepthFirstSearchRecursive.java)|
-|[Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)|[Dijkstra.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/dijkstra/Dijkstra.java)|
-[Topological Ordering](https://en.wikipedia.org/wiki/Topological_sorting)|[TopologicalOrdering.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/TopologicalOrdering.java)
-[Cycle Detection](https://en.wikipedia.org/wiki/Cycle_detection)|[CycleDetection.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/CycleDetection.java)
+|[Bread-First-Search](https://en.wikipedia.org/wiki/Breadth-first_search)|[BreadthFirstSearch.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/BreadthFirstSearch.java)|
+|[Depth-First-Search Iterative](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchIterative.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/DepthFirstSearchIterative.java)|
+|[Depth-First-Search Recursive](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchRecursive.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/DepthFirstSearchRecursive.java)|
+|[Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)|[Dijkstra.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/dijkstra/Dijkstra.java)|
+[Topological Ordering](https://en.wikipedia.org/wiki/Topological_sorting)|[TopologicalOrdering.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/TopologicalOrdering.java)
+[Cycle Detection](https://en.wikipedia.org/wiki/Cycle_detection)|[CycleDetection.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/CycleDetection.java)
 
 ### LeetCode Algorithms
 
 | Topic | Description | Time Complexity | Space Complexity|
 |:--------------|:----------------:|:----------------:|:----------------:|
-|String |[Check for Anagram](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Anagram.java)|O(n)|O(1)|
-|String |[Check for Palindrome](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Palindrome.java)|O(n)|O(1)|
-|String |[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Reverse.java)|O(n)|O(1)|
-|String |[Find First Unique Character](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/FirstUniqueChar.java)|O(n)|O(1)|
-|LinkedList|[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/linkedlist/Reverse.java)|O(n)|O(1)|
-|Queue|[Design Circular Queue](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/queue/CircularQueue.java)|O(1)|O(n)|
-|Queue|[Moving Average](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/queue/MovingAverage.java)|O(1)|O(n)|
-|Stack|[Min Stack](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/stack/MinStack.java)|O(n)|O(n)|
-|Stack|[Daily Temperatures](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/stack/DailyTemperatures.java)|O(n)|O(n)|
-|Graph|[Number Of Islands](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/NumberOfIslands.java)|O(m*n)|O(m*n)|
-|Graph|[Walls And Gates](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/graph/WallsAndGates.java)|O(m*n)|O(m*n)|
-|HashTable|[LRU Cache](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/hashtable/LRUCache.java)|O(1)|O(n)|
+|String |[Check for Anagram](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Anagram.java)|O(n)|O(1)|
+|String |[Check for Palindrome](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Palindrome.java)|O(n)|O(1)|
+|String |[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Reverse.java)|O(n)|O(1)|
+|String |[Find First Unique Character](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/FirstUniqueChar.java)|O(n)|O(1)|
+|LinkedList|[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/linkedlist/Reverse.java)|O(n)|O(1)|
+|Queue|[Design Circular Queue](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/CircularQueue.java)|O(1)|O(n)|
+|Queue|[Moving Average](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/MovingAverage.java)|O(1)|O(n)|
+|Stack|[Min Stack](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/MinStack.java)|O(n)|O(n)|
+|Stack|[Daily Temperatures](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/DailyTemperatures.java)|O(n)|O(n)|
+|Graph|[Number Of Islands](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/NumberOfIslands.java)|O(m*n)|O(m*n)|
+|Graph|[Walls And Gates](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/WallsAndGates.java)|O(m*n)|O(m*n)|
+|HashTable|[LRU Cache](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/hashtable/LRUCache.java)|O(1)|O(n)|
 
 ## Implemented Data Structures
 
