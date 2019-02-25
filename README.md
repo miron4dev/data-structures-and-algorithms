@@ -7,6 +7,7 @@
 |Classic|[Binary Search](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/BinarySearch.java)|O(log(n))|O(1)|
 |Classic|[QuickSelect](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/QuickSelect.java)|O(n)|O(1)|
 |Classic|[Queens Problem](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/QueensProblem.java)|O(n!)|O(n)|
+|Classic|[Hamiltonian Cycle](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/HamiltonianCycle.java)|O(n*n!)|O(n)|
 |String |[Check for Anagram](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Anagram.java)|O(n)|O(1)|
 |String |[Check for Palindrome](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Palindrome.java)|O(n)|O(1)|
 |String |[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/string/Reverse.java)|O(n)|O(1)|
