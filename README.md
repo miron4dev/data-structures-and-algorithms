@@ -21,20 +21,20 @@
 
 ### LeetCode Algorithms
 
-| Topic | Description | Time Complexity | Space Complexity|
-|:--------------|:----------------:|:----------------:|:----------------:|
-|String |[Check for Anagram](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Anagram.java)|O(n)|O(1)|
-|String |[Check for Palindrome](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Palindrome.java)|O(n)|O(1)|
-|String |[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Reverse.java)|O(n)|O(1)|
-|String |[Find First Unique Character](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/FirstUniqueChar.java)|O(n)|O(1)|
-|LinkedList|[Reverse](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/linkedlist/Reverse.java)|O(n)|O(1)|
-|Queue|[Design Circular Queue](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/CircularQueue.java)|O(1)|O(n)|
-|Queue|[Moving Average](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/MovingAverage.java)|O(1)|O(n)|
-|Stack|[Min Stack](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/MinStack.java)|O(n)|O(n)|
-|Stack|[Daily Temperatures](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/DailyTemperatures.java)|O(n)|O(n)|
-|Graph|[Number Of Islands](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/NumberOfIslands.java)|O(m*n)|O(m*n)|
-|Graph|[Walls And Gates](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/WallsAndGates.java)|O(m*n)|O(m*n)|
-|HashTable|[LRU Cache](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/hashtable/LRUCache.java)|O(1)|O(n)|
+| Topic | Description | Implementation | Time Complexity | Space Complexity|
+|:--------------|:--------------|:----------------:|:----------------:|:----------------:|
+|String |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[Anagram.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Anagram.java)|O(n)|O(1)|
+|String |[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Palindrome.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Palindrome.java)|O(n)|O(1)|
+|String |[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[Reverse.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/Reverse.java)|O(n)|O(1)|
+|String |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[FirstUniqueChar.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/string/FirstUniqueChar.java)|O(n)|O(1)|
+|LinkedList|[206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Reverse.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/linkedlist/Reverse.java)|O(n)|O(1)|
+|Queue|[622. Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)|[CircularQueue.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/CircularQueue.java)|O(1)|O(n)|
+|Queue|[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[MovingAverage.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/queue/MovingAverage.java)|O(1)|O(n)|
+|Stack|[155. Min Stack](https://leetcode.com/problems/min-stack/)|[MinStack.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/MinStack.java)|O(n)|O(n)|
+|Stack|[739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)|[DailyTemperatures.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/stack/DailyTemperatures.java)|O(n)|O(n)|
+|Graph|[200. Number of Islands](https://leetcode.com/problems/number-of-islands/)|[NumberOfIslands.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/NumberOfIslands.java)|O(m*n)|O(m*n)|
+|Graph|[286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/)|[WallsAndGates.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/graph/WallsAndGates.java)|O(m*n)|O(m*n)|
+|HashTable|[146. LRU Cache](https://leetcode.com/problems/lru-cache/)|[LRUCache.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/leetcode/hashtable/LRUCache.java)|O(1)|O(n)|
 
 ## Implemented Data Structures
 
