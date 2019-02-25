@@ -12,12 +12,13 @@
 |[Hamiltonian Cycle](https://en.wikipedia.org/wiki/Hamiltonian_path)|[HamiltonianCycle.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/HamiltonianCycle.java)|
 |[Graph Coloring](https://en.wikipedia.org/wiki/Graph_coloring)|[GraphColoring.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/GraphColoring.java)|
 |[Knight's Tour Problem](https://en.wikipedia.org/wiki/Knight%27s_tour)|[KnightTourProblem.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/KnightTourProblem.java)|
+|[Maze](https://en.wikipedia.org/wiki/Maze_solving_algorithm)|[Maze.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/Maze.java)|
 |[Bread-First-Search](https://en.wikipedia.org/wiki/Breadth-first_search)|[BreadthFirstSearch.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/BreadthFirstSearch.java)|
 |[Depth-First-Search Iterative](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchIterative.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/DepthFirstSearchIterative.java)|
 |[Depth-First-Search Recursive](https://en.wikipedia.org/wiki/Depth-first_search)|[DepthFirstSearchRecursive.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/traversal/DepthFirstSearchRecursive.java)|
 |[Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)|[Dijkstra.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/dijkstra/Dijkstra.java)|
-[Topological Ordering](https://en.wikipedia.org/wiki/Topological_sorting)|[TopologicalOrdering.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/TopologicalOrdering.java)
-[Cycle Detection](https://en.wikipedia.org/wiki/Cycle_detection)|[CycleDetection.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/CycleDetection.java)
+|[Topological Ordering](https://en.wikipedia.org/wiki/Topological_sorting)|[TopologicalOrdering.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/TopologicalOrdering.java)|
+|[Cycle Detection](https://en.wikipedia.org/wiki/Cycle_detection)|[CycleDetection.java](https://github.com/miron4dev/data-structures-and-algorithms/blob/master/src/main/java/com/miron4dev/dsa/algorithm/classic/graph/CycleDetection.java)|
 
 ### LeetCode Algorithms
 
