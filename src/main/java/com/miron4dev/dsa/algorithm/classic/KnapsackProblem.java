@@ -32,4 +32,21 @@ public class KnapsackProblem {
         }
         return knapsackTable[numOfItems][capacity];
     }
+
+    public int solveRecursively() {
+        return knapsack(values.length - 1, capacity);
+    }
+
+    private int knapsack(int index, int weight) {
+        if (index < 0) {
+            return 0;
+        }
+        if (weights[index] > weight) {
+            return knapsack(index - 1, weight);
+        }
+        return Math.max(
+                knapsack(index - 1, weight),
+                knapsack(index - 1, weight - weights[index]) + values[index]
+        );
+    }
 }
