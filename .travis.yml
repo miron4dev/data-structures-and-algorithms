@@ -3,6 +3,7 @@ matrix:
     - language: java
       before_script:
         - cd java
+
     - language: ruby
       before_script:
         - cd ruby
