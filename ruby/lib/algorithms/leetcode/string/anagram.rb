@@ -1,5 +1,8 @@
 module Algorithms::Leetcode::String
 
+  #
+  # Given two strings str1 and str2, write a function to determine if str1 is an anagram of str2.
+  #
   class Anagram
 
     OFFSET = 'a'.ord
@@ -7,13 +10,12 @@ module Algorithms::Leetcode::String
     def anagram?(str1, str2)
       return false if str1.length != str2.length
 
-      temp = Array.new(26, 0)
+      freq = Array.new(26, 0)
 
-      str1.each_byte {|c| temp[c - OFFSET] = temp[c - OFFSET] + 1}
-      str2.each_byte {|c| temp[c - OFFSET] = temp[c - OFFSET] - 1}
+      str1.each_byte {|c| freq[c - OFFSET] = freq[c - OFFSET] + 1}
+      str2.each_byte {|c| freq[c - OFFSET] = freq[c - OFFSET] - 1}
 
-      return temp.all? {|it| it == 0}
+      freq.all?(&:zero?)
     end
   end
 end
-

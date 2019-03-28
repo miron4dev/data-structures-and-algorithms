@@ -5,3 +5,4 @@ module Algorithms
 end
 
 require 'algorithms/leetcode/string/anagram'
+require 'algorithms/leetcode/string/palindrome'
