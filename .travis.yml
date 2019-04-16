@@ -9,7 +9,7 @@ matrix:
         - cd ruby
       before_install:
         - gem install bundler -v 2.0.1
-        - bundle install
+        - BUNDLE_GEMFILE=ruby/Gemfile bundle install
       sudo: false
       cache: bundler
       rvm:
