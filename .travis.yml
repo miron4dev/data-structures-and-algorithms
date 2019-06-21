@@ -1,7 +1,6 @@
 matrix:
   include:
     - language: java
-      jdk: oraclejdk8
       before_script:
         - cd java
       script:
